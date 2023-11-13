@@ -15,8 +15,7 @@ public partial class HighScore
     [Key]
     public int PlayerId { get; set; }
 
-    [Column("HighScore")]
-    public int HighScore1 { get; set; }
+    public int Score { get; set; }
 
     [ForeignKey("GameId")]
     [InverseProperty("HighScores")]

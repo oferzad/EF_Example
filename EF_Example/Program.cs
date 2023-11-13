@@ -65,7 +65,7 @@ namespace EF_Example
             p.HighScores.Add(new HighScore()
             {
                 GameId = 1,
-                HighScore1 = 1000,
+                Score = 1000,
             });
 
             db.Players.Add(p);
@@ -86,7 +86,7 @@ namespace EF_Example
             p.HighScores.Add(new HighScore()
             {
                 GameId = 1,
-                HighScore1 = 1000,
+                Score = 1000,
             });
 
             //First add the player object and get player id from database
@@ -154,7 +154,7 @@ namespace EF_Example
                 Console.WriteLine($"This PLayer has {p.HighScores.Count} High Scores:");
                 foreach (HighScore highScore in p.HighScores)
                 {
-                    Console.WriteLine($"In Game: {highScore.Game.Name} High Score: {highScore.HighScore1}");
+                    Console.WriteLine($"In Game: {highScore.Game.Name} High Score: {highScore.Score}");
                 }
             }
         }
@@ -175,7 +175,7 @@ namespace EF_Example
                 foreach (HighScore highScore in highScores)
                 {
                     Game? g = db.Games.Where(gg => gg.GameId == highScore.GameId).FirstOrDefault();
-                    Console.WriteLine($"In Game: {g.Name} High Score: {highScore.HighScore1}");
+                    Console.WriteLine($"In Game: {g.Name} High Score: {highScore.Score}");
                 }
             }
         }

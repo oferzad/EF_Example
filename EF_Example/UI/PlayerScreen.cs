@@ -33,7 +33,7 @@ namespace EF_Example.UI
                     ObjectView showPlayer = new ObjectView("", p);
                     showPlayer.Show();
                     Console.WriteLine("Press H to see Player High Scores or other key to go back!");
-                    char c = Console.ReadKey().KeyChar;
+                    char c = Console.ReadKey(true).KeyChar;
                     if (c == 'h' || c == 'H')
                     {
                         Console.WriteLine();

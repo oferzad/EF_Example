@@ -10,7 +10,7 @@ namespace EF_Example
         
         static void Main(string[] args)
         {
-
+            //Change number 1
             //scaffold-DbContext "Server = (localdb)\MSSQLLocalDB; Database=GameHighScores; Trusted_Connection=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Models -Context HighScoresDbContext -DataAnnotations -force
             UIMain ui = new UIMain(new MainMenu());
             ui.ApplicationStart();
